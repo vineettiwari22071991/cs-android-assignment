@@ -8,6 +8,7 @@ import com.example.androidassignment.R
 import com.example.androidassignment.models.Genre
 import kotlinx.android.synthetic.main.item_genres.view.*
 
+//This Adapter is use by Dialog Fragment Details to show Genres List
 class GenresAdapter(val genreList:ArrayList<Genre>):RecyclerView.Adapter<GenresAdapter.MyViewHolder>() {
 
 
@@ -40,11 +41,6 @@ class GenresAdapter(val genreList:ArrayList<Genre>):RecyclerView.Adapter<GenresA
 
             tvGenres.text=genre.name
         }
-
-
-
-
-
 
     }
 }

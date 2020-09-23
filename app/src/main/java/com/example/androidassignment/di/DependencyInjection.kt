@@ -49,8 +49,6 @@ interface ApplicationComponent {
 @Component(modules = [ApiModule::class,ApplicationModule::class,ViewModelModule::class])
 
 
-
-
 interface RealComponent : ApplicationComponent {
 
     @Component.Builder

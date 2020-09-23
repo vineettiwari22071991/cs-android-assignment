@@ -17,9 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidassignment.R
 import com.example.androidassignment.adapter.GenresAdapter
 import com.example.androidassignment.core.getViewModel
-import com.example.androidassignment.utils.dateConverter
-import com.example.androidassignment.utils.getProgressDrawable
-import com.example.androidassignment.utils.loadImage
+import com.example.androidassignment.utils.*
 import com.example.androidassignment.viewmodels.MovieDetailViewModel
 import kotlinx.android.synthetic.main.fragment_movie_detail.*
 
@@ -68,12 +66,12 @@ class DialogFragmentMovieDetail(val items: String) : DialogFragment() {
             it.apply {
 
                 pb_movie_detailview.visibility = GONE
-                tv_duration.text = dateConverter(this.release_date) + " - 1h 45m"
+                tv_duration.text = dateConverter(this.release_date) + timeDuration
                 tv_overview.text = this.overview
                 tv_title.text = this.title
 
                 img_poster.loadImage(
-                    "https://image.tmdb.org/t/p/w500" + this.poster_path,
+                    imageURL+ this.poster_path,
                     getProgressDrawable(img_poster.context)
                 )
                 generesdAdapter.updateGenreslist(this.genres)

@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidassignment.R
 import com.example.androidassignment.models.MoviePopularResult
-import com.example.androidassignment.utils.dateConverter
-import com.example.androidassignment.utils.getProgressDrawable
-import com.example.androidassignment.utils.loadImage
+import com.example.androidassignment.utils.*
 import com.example.androidassignment.views.FragmentMovieList
 import kotlinx.android.synthetic.main.item_vertical_movie_list.view.*
 
@@ -61,8 +59,8 @@ class MovieListVerticalAdapter(
 
             moviename.text=moviePopular.title
             movierelease.text=dateConverter(moviePopular.release_date)
-            movieduration.text="1h 45m"
-            img_poster.loadImage("https://image.tmdb.org/t/p/w500"+moviePopular.poster_path,progressDrawable)
+            movieduration.text= timeDuration
+            img_poster.loadImage(imageURL+moviePopular.poster_path,progressDrawable)
 
             parentview.setOnClickListener {
 
@@ -71,7 +69,7 @@ class MovieListVerticalAdapter(
 
 
             val percentage=(moviePopular.vote_average/10)*100
-            val percentagevalue=""+percentage.toInt()+"%"
+            val percentagevalue=""+percentage.toInt()+percentagesymbol
 
             if(percentage>50)
             {

@@ -17,8 +17,6 @@ open class App : Application() {
             .context(this)
             .build()
     }
-
-
 }
 
 val Context.component: ApplicationComponent

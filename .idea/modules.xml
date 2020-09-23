@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/cs-android-assignment.iml" filepath="$PROJECT_DIR$/cs-android-assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidAssignment.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidAssignment.iml" group="AndroidAssignment" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="AndroidAssignment/app" />
     </modules>
   </component>
 </project>

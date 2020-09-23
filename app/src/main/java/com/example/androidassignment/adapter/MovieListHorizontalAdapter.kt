@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidassignment.R
 import com.example.androidassignment.models.MovieNowPlayingResult
 import com.example.androidassignment.utils.getProgressDrawable
+import com.example.androidassignment.utils.imageURL
 import com.example.androidassignment.utils.loadImage
 import kotlinx.android.synthetic.main.item_horizontal_movie.view.*
 
@@ -42,7 +43,7 @@ var imovieClick:IonMovieClick):RecyclerView.Adapter<MovieListHorizontalAdapter.M
 
         fun bind(movieresult: MovieNowPlayingResult,imovieClick: IonMovieClick)
         {
-            imageView.loadImage("https://image.tmdb.org/t/p/w500"+movieresult.poster_path,progressDrawable)
+            imageView.loadImage(imageURL+movieresult.poster_path,progressDrawable)
 
             imageView.setOnClickListener{
 
