@@ -69,7 +69,9 @@ class FragmentMovieList : Fragment(R.layout.fragment_movie_list),
                             if (lastitemvisibale == totalvalue - 1) {
                                 pb_movie_popular.visibility = VISIBLE
                                 pageno += 1
-                                viewModel.fetchPopularMoiveList(pageno)
+                                if(pageno<=500) {
+                                    viewModel.fetchPopularMoiveList(pageno)
+                                }
                             }
                             isloading = false
                         }

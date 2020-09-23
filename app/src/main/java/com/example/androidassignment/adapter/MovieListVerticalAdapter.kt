@@ -58,8 +58,15 @@ class MovieListVerticalAdapter(
         {
 
             moviename.text=moviePopular.title
-            movierelease.text=dateConverter(moviePopular.release_date)
-            movieduration.text= timeDuration
+            if(moviePopular.release_date.isNullOrEmpty())
+            {
+                movierelease.text=nA
+            }else
+            {
+                movierelease.text=dateConverter(moviePopular.release_date)
+            }
+
+            movieduration.text= timeDurationwithoutdash
             img_poster.loadImage(imageURL+moviePopular.poster_path,progressDrawable)
 
             parentview.setOnClickListener {

@@ -1,4 +1,3 @@
-@file:Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 
 package com.example.androidassignment.utils
 
@@ -38,12 +37,17 @@ fun ImageView.loadImage(uri: String?, progressDrawable: CircularProgressDrawable
 @SuppressLint("SimpleDateFormat")
 fun dateConverter(day:String):String
 {
-    val originalFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
-    val targetFormat: DateFormat = SimpleDateFormat( "MMMM dd, yyyy")
-    val date: Date = originalFormat.parse(day)
-    val formattedDate: String = targetFormat.format(date)
+    if(day != "" ) {
+        val originalFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
+        val targetFormat: DateFormat = SimpleDateFormat("MMMM dd, yyyy")
+        val date: Date = originalFormat.parse(day)
+        val formattedDate: String = targetFormat.format(date)
 
-    return formattedDate
+        return formattedDate
+    }else
+    {
+        return "NA";
+    }
 
 }
 
