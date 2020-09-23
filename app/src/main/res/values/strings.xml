@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MOVIEBOX</string>
+    <string name="popular_movies">Most popular</string>
+    <string name="todo">TODO</string>
+    <string name="ironman">IronMan</string>
+    <string name="_120min">120min</string>
+    <string name="_20_10_2020">20-10-2020</string>
+    <string name="now_playing">Playing now</string>
+    <string name="overview">Overview</string>
+    <string name="oops_something_went_wrong_please_check_internet_connection">oops...Something went wrong Please check Internet connection!!</string>
+</resources>

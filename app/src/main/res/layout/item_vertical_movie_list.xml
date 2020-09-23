@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray">
+
+
+        <RelativeLayout
+            android:id="@+id/vparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/cardview_background">
+
+            <ImageView
+                android:id="@+id/img_poster"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitXY"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@+id/img_poster"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="jsdkhgdsakhgdsakhgdsakjdkjkdsakjdkjdskdsjkdsajkdsdsgkgdskjsdaj"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:maxLength="25"
+                    android:textColor="@color/textcolor"
+                    android:textSize="18sp"
+                    android:paddingBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_release"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/ironman"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/ironman"
+                    android:textColor="@color/textcolor"
+                    android:textSize="13sp" />
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+               >
+
+                <ProgressBar
+                    android:id="@+id/rating"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress"
+                    android:secondaryProgress="45"
+                    android:background="@drawable/circular_bg"/>
+
+
+                <TextView
+                    android:id="@+id/txtProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    tools:text="6.1"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textColor="@color/textcolor"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/yellow"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:id="@+id/tv_error"
+        android:visibility="gone"
+        android:text="@string/oops_something_went_wrong_please_check_internet_connection"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing"
+        android:textAlignment="viewStart"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tv_now"
+        android:textColor="@color/yellow"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/movie_list"
+        android:layout_below="@+id/tv_now"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/pb_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_now"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:theme="@style/ProgressBarStyle"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/popular_movies"
+        android:layout_below="@+id/movie_list"
+        android:textAlignment="viewStart"
+        android:id="@+id/tv_popular"
+        android:textColor="@color/yellow"
+        android:paddingStart="15dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/movie_popular_list"
+        android:layout_below="@+id/tv_popular"
+        />
+
+
+    <ProgressBar
+        android:id="@+id/pb_movie_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_centerInParent="true"
+        android:theme="@style/ProgressBarStyle"/>
+
+</RelativeLayout>

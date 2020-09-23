@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#191919</color>
+    <color name="colorPrimaryDark">#191919</color>
+    <color name="colorAccent">#191919</color>
+    <color name="greenLight">#447a29</color>
+    <color name="gray">#313131</color>
+    <color name="yellow">#fcd052</color>
+    <color name="textcolor">#cdcdcd</color>
+    <color name="gery2">#191919</color>
+    <color name="gery3">#212121</color>
+    <color name="transparent">#5B000000</color>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="28dp"
+          tools:text="@string/ironman"
+          android:textAlignment="center"
+          android:textSize="16sp"
+          android:maxLines="1"
+          android:ellipsize="end"
+          android:padding="2dp"
+          android:textStyle="bold"
+          android:id="@+id/tv_genres"/>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

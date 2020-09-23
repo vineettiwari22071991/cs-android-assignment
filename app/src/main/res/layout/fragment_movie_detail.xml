@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:overScrollMode="always"
+    android:nestedScrollingEnabled="true"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/yellow"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:id="@+id/tv_error"
+            android:visibility="gone"
+            android:text="@string/oops_something_went_wrong_please_check_internet_connection"/>
+
+        <ProgressBar
+            android:id="@+id/pb_movie_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/ProgressBarStyle"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/todo"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/arrow"
+            android:id="@+id/arrow"
+            />
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="135dp"
+            android:layout_height="201dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:padding="5dp"
+            android:background="@drawable/rectanglebg"
+            android:layout_marginTop="50dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_poster"
+            tools:text="@string/ironman"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/textcolor"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            tools:text="@string/ironman"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textColor="@color/textcolor"/>
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_duration"
+            android:text="@string/overview"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:textColor="@color/textcolor"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_release"
+            tools:text="@string/ironman"
+            android:textColor="@color/textcolor"
+            android:textSize="18sp"
+            android:layout_marginStart="20dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_genres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_overview"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
