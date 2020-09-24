@@ -66,7 +66,7 @@ class DialogFragmentMovieDetail(val items: String) : DialogFragment() {
             it.apply {
 
                 pb_movie_detailview.visibility = GONE
-                tv_duration.text = dateConverter(this.release_date) + timeDuration
+                tv_duration.text = dateConverter(this.release_date) + " -"+formatHoursAndMinutes(this.runtime)
                 tv_overview.text = this.overview
                 tv_title.text = this.title
 
